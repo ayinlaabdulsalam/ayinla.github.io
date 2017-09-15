@@ -1,0 +1,27 @@
+{
+    "name": "ayinla",
+    "homepage": ".",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1",
+        "react-router-dom": "^4.1.1",
+        "styled-components": "^2.1.2"
+    },
+    "devDependencies": {
+        "react-scripts": "1.0.10",
+        "tap-spec": "^4.1.1",
+        "tape": "^4.8.0"
+    },
+    "scripts": {
+        "prebuild": "rm -r index.html static",
+        "build": "react-scripts build",
+        "postbuild": "yarn clean-build && yarn git-flat",
+        "clean-build": "cd build && rm asset-manifest.json service-worker.js static/js/*.map",
+        "git-flat": "mv build/* . && trash build",
+        "start": "react-scripts start",
+        "test": "tape test | tap-spec",
+        "eject": "react-scripts eject"
+    }
+}
