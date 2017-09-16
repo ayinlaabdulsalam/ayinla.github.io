@@ -4,8 +4,6 @@
 Personal Website of **Ayinla Abdulsalam**
 
 **Built with**
-***
-
 * React
 * Styled Components
 * Webpack
