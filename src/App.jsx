@@ -9,16 +9,22 @@ import {
   injectGlobal,
 } from 'styled-components';
 
-import Home from './containers/home';
+import Welcome from './containers/welcome';
+import bkg from './assets/bkg.png';
 
 injectGlobal `
-    body,html{
+  body,html{
     margin: 0;
     padding:0;
-    background: #F4F3F3;
     width: 100vw;
     height: 100vh;
-}
+  }
+
+  body{
+    background-image: url(${bkg});
+    background-size: cover;
+  }
+
 `;
 
 export default props => (
@@ -26,7 +32,7 @@ export default props => (
   <BrowserRouter>
 
     <div>
-      <Route path="/" component={Home} />
+      <Route path="/" component={Welcome} />
     </div>
 
   </BrowserRouter>
