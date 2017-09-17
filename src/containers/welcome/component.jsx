@@ -6,13 +6,10 @@ import triangles from '../../assets/triangles.svg';
 
 const contacts = [{
   name: 'Github',
-  url: '',
+  url: 'https://github.com/ayinlaaji',
 }, {
   name: 'LinkedIn',
-  url: '',
-}, {
-  name: 'Email',
-  url: '',
+  url: 'https://www.linkedin.com/in/ayinla/',
 }];
 
 const Outer = styled.div `

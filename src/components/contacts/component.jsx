@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 const Link = styled.a `
   margin-right: 4%;
+  text-decoration: none;
+  color: white;
 `;
 
 const Button = styled.button `
@@ -12,7 +14,7 @@ width: 224.8px;
 `;
 const Div = styled.div `position: absolute; bottom: 3%;`;
 const HireMe = props => <Button> Hire Me </Button>;
-const Contact = props => <Link> {props.contact.name } </Link>;
+const Contact = props => <Link href={props.contact.url}> {props.contact.name } </Link>;
 const Contacts = props => <Div> <HireMe /> <div> {props.contacts.map(contact => <Contact contact={contact} />)} </div> </Div>;
 
 export default Contacts;
