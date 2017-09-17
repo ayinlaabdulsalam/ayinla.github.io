@@ -13,12 +13,10 @@ import Welcome from './containers/welcome';
 import bkg from './assets/bkg.png';
 
 injectGlobal `
-  body,html{
+  body, html{
     margin: 0;
     padding:0;
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Varela Round', sans-serif;
   }
 
   body{

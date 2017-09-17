@@ -2,13 +2,16 @@ import React from 'react';
 
 import styled from 'styled-components';
 import Contacts from '../../components/contacts';
-import triangles from '../../assets/triangles.svg';
+import triangle from '../../assets/triangles.svg';
 
 const contacts = [{
   name: 'Github',
   url: 'https://github.com/ayinlaaji',
 }, {
   name: 'LinkedIn',
+  url: 'https://www.linkedin.com/in/ayinla/',
+}, {
+  name: 'WakaTime',
   url: 'https://www.linkedin.com/in/ayinla/',
 }];
 
@@ -17,68 +20,65 @@ const Outer = styled.div `
   height 100vh;
 `;
 
-const BlackHalf = styled.div `
-  height: 100%;
-  display: inline-block;
-  width: ${props => props.white ? '33%' : '67%'};
-  background: ${props => props.white ? 'white' : 'rgba(0, 0, 0, 0.85)'}
-`;
-
 const Aside = styled.aside `
   height: 100%;
+  width: 28.3%;
   color: white;
   position:fixed;
   top: 0;
   left: 0;
+  margin-left: 4.9%;
   box-sizing: border-box;
-  padding-left: 105px;
-  padding-top: 210px;
-  > p {
-	font-size: 50px;
-	margin: 0;
-	margin-bottom: 45px;
-  }
-
-  > span {
-	font-size: 25px;
-  }
-
 `;
 
 const Img = styled.img `
+  float: right;
   height: 100%;
-  right: 32.9%;
-  position:absolute;
-`;
-
-const H1 = styled.h1 `
-  z-index: 10;
-  color: white;
-  position: fixed;
-  top : 3rem;
 `;
 
 const HeroP = styled.p `
-color:black;
-position:fixed;
-right: 30px;
-bottom: 200px;
-width: 550px;
-font-size: 35px;
+  color:black;
+  position:fixed;
+  right: 30px;
+  bottom: 200px;
+  width: 550px;
+  font-size: 2.3rem;
 `;
 
-const Hero = props => <HeroP> I am a <span> Minimalist </span> and <br /> I won't let you <span> f**k </span> things up .</HeroP>;
+const Name = styled.div `
+  width: 100%;
+  position: relative;
+  top: 18.6%;
+  > p {
+	  font-size: 2.8rem;
+	  margin: 0;
+	  margin-bottom: 1.4%;
+    }
 
-const HireMe = props => <button> Hire Me </button>;
+  > span {
+	  font-size: 1.7rem;
+	  color: #A7A7A7;
+	  opacity: 0.66;
+  }
+`;
+
+const Hero = props => (<HeroP> I am a <span> Minimalist </span> and
+  <br />
+  I won't let you <span> f**k </span> things up .
+</HeroP>);
 
 const Home = () => (
   <Outer>
-    <BlackHalf />
-    <Img src={triangles} />
-    <BlackHalf white />
+    <Img src={triangle} />
     <Aside>
-      <p> Ayinla <br /> Abdulsalam </p>
-      <span> Trained Introvert </span>
+      <Name>
+        <p>
+		AYINLA
+		<br />
+		ABDULSALAM
+	  </p>
+        <span> Trained Introvert </span>
+      </Name>
       <Contacts contacts={contacts} />
       <Hero />
     </Aside>
