@@ -18,6 +18,7 @@ injectGlobal `
     padding:0;
     width: 100vw;
     height: 100vh;
+    font-family: 'Work Sans', sans-serif;
   }
 
   body{

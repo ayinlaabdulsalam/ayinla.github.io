@@ -29,11 +29,26 @@ const BlackHalf = styled.div `
 
 const Aside = styled.aside `
   height: 100%;
-  z-index: -4;
+  color: white;
+  position:fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding-left: 105px;
+  padding-top: 210px;
+  > p {
+	font-size: 50px;
+	margin: 0;
+	margin-bottom: 45px;
+  }
+
+  > span {
+	font-size: 25px;
+  }
+
 `;
 
 const Img = styled.img `
-  z-index: 10;
   height: 100%;
   right: 32.9%;
   position:absolute;
@@ -45,6 +60,18 @@ const H1 = styled.h1 `
   position: fixed;
   top : 3rem;
 `;
+
+const HeroP = styled.p `
+color:black;
+position:fixed;
+right: 30px;
+bottom: 200px;
+width: 550px;
+font-size: 35px;
+`;
+
+const Hero = props => <HeroP> I am a <span> Minimalist </span> and <br /> I won't let you <span> f**k </span> things up .</HeroP>;
+
 const HireMe = props => <button> Hire Me </button>;
 
 const Home = () => (
@@ -52,6 +79,12 @@ const Home = () => (
     <BlackHalf />
     <Img src={triangles} />
     <BlackHalf white />
+    <Aside>
+      <p> Ayinla <br /> Abdulsalam </p>
+      <span> Trained Introvert </span>
+      <Contacts contacts={contacts} />
+      <Hero />
+    </Aside>
   </Outer>
 );
 
