@@ -10,7 +10,6 @@ import {
 } from 'styled-components';
 
 import Welcome from './containers/welcome';
-import bkg from './assets/bkg.png';
 
 injectGlobal `
   body, html{
@@ -19,9 +18,13 @@ injectGlobal `
     font-family: 'Varela Round', sans-serif;
   }
 
+  *{
+  padding: 0;
+  margin: 0;
+  }
+
   body{
-    background-image: url(${bkg});
-    background-size: cover;
+    height: 100vh;
   }
 
 `;

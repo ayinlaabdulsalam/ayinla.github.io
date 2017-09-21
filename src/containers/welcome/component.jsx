@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 import Contacts from '../../components/contacts';
-import triangle from '../../assets/triangles.svg';
+import buddist from '../../assets/buddist.png';
 
 const contacts = [{
   name: 'Github',
@@ -12,12 +12,23 @@ const contacts = [{
   url: 'https://www.linkedin.com/in/ayinla/',
 }, {
   name: 'WakaTime',
-  url: 'https://www.linkedin.com/in/ayinla/',
+  url: 'https://wakatime.com/@ayinla',
 }];
 
 const Outer = styled.div `
+  overflow: hidden;
+  background: url(${buddist});
   width: 100vw;
   height 100vh;
+`;
+
+const Cover = styled.div `
+  background: white;
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
 `;
 
 const Aside = styled.aside `
@@ -31,18 +42,16 @@ const Aside = styled.aside `
   box-sizing: border-box;
 `;
 
-const Img = styled.img `
-  float: right;
-  height: 100%;
-`;
-
 const HeroP = styled.p `
   color:black;
   position:fixed;
   right: 30px;
-  bottom: 200px;
+  bottom: 315px;
   width: 550px;
   font-size: 2.3rem;
+  > span {
+	  font-size: 3.3rem;
+	}
 `;
 
 const Name = styled.div `
@@ -62,14 +71,31 @@ const Name = styled.div `
   }
 `;
 
+const Slant = styled.div `
+  float: left;
+  height: 100%;
+  position: absolute;
+  background : ${props => props.white ? 'white' : 'black'};
+  left : ${props => props.white ? '68%' : '4%'};
+  opacity: ${props => props.white ? '1' : '0.75'};
+  width: ${props => props.white ? '100%' : '60%'};
+  transform: rotate(20deg) ;
+  transform-origin: right top;
+  display:block;
+  height: 200%;
+
+  }
+`;
+
 const Hero = props => (<HeroP> I am a <span> Minimalist </span> and
   <br />
   I won't let you <span> f**k </span> things up .
 </HeroP>);
 
 const Home = () => (
-  <Outer>
-    <Img src={triangle} />
+  <Outer >
+    <Slant />
+    <Slant white />
     <Aside>
       <Name>
         <p>
@@ -80,8 +106,9 @@ const Home = () => (
         <span> Trained Introvert </span>
       </Name>
       <Contacts contacts={contacts} />
-      <Hero />
     </Aside>
+    <Hero />
+    <Cover />
   </Outer>
 );
 

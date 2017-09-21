@@ -2,18 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Div = styled.div `
-  top: 70.8%;
+  top: 63.8%;
   position: relative;
   width: 100%;
-  > ul {
+  > div {
 	  padding: 0;
       margin: 0;
-	> li {
-		list-style: none;
+	> a {
+		text-decoration: none;
 		display: inline;
 		margin-right: 3.1rem;
 		font-size: 0.9rem;
 		color: #8E8E8E;
+        cursor: pointer;
 	  }
 
 	}
@@ -23,14 +24,15 @@ const Div = styled.div `
 	  height: 45px;
 	  font-size: 1.7rem;
 	  margin-bottom: 3rem;
+      cursor: pointer;
 	}
 `;
 
-const Contact = props => <li href={props.contact.url}> {props.contact.name } </li>;
+const Contact = props => <a href={props.contact.url}> {props.contact.name } </a>;
 const Contacts = props => (
   <Div>
     <button> Hire Me </button>
-    <ul> {props.contacts.map(contact => <Contact contact={contact} />)} </ul>
+    <div> {props.contacts.map(contact => <Contact key={contact.name} contact={contact} />)} </div>
   </Div>
 );
 
