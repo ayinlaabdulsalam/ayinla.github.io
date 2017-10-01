@@ -11,13 +11,14 @@ const contacts = [{
   name: 'LinkedIn',
   url: 'https://www.linkedin.com/in/ayinla/',
 }, {
-  name: 'WakaTime',
+
   url: 'https://wakatime.com/@ayinla',
 }];
 
 const Outer = styled.div `
   overflow: hidden;
   background: url(${buddist});
+  background-size: 100%;
   width: 100vw;
   height 100vh;
 `;
