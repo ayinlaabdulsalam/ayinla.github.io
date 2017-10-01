@@ -44,30 +44,34 @@ const Aside = styled.aside `
 
 const HeroP = styled.p `
   color:black;
-  position:fixed;
-  right: 30px;
-  bottom: 315px;
-  width: 550px;
-  font-size: 2.3rem;
+  position:absolute;
+  right: 0;
+  bottom: 35%;
+  width: 45%;
+  font-size: 1rem;
+  h3{
+    font-size: 3rem;
+  }
   > span {
-	  font-size: 3.3rem;
-	}
+      color: #4133a2;
+      font-size: 2.5rem;
+    }
 `;
 
 const Name = styled.div `
   width: 100%;
   position: relative;
-  top: 18.6%;
+  top: 10%;
   > p {
-	  font-size: 2.8rem;
-	  margin: 0;
-	  margin-bottom: 1.4%;
+      font-size: 2rem;
+      margin: 0;
+      margin-bottom: 1.4%;
     }
 
   > span {
-	  font-size: 1.7rem;
-	  color: #A7A7A7;
-	  opacity: 0.66;
+      font-size: 1rem;
+      color: #A7A7A7;
+      opacity: 0.66;
   }
 `;
 
@@ -87,28 +91,33 @@ const Slant = styled.div `
   }
 `;
 
-const Hero = props => (<HeroP> I am a <span> Minimalist </span> and
-  <br />
-  I won't let you <span> f**k </span> things up .
-</HeroP>);
+const Hero = props => {
+
+  return (<HeroP>
+    <h3> Hi,</h3> <br />
+    I write vanilla code. <br />
+    I am mostly interested in <span> Javascript </span>, <span> Functional </span> programming, <span> React </span> &amp; <span> Redux </span>
+    </HeroP>)
+
+}
 
 const Home = () => (
   <Outer >
-    <Slant />
-    <Slant white />
-    <Aside>
-      <Name>
-        <p>
-		AYINLA
-		<br />
-		ABDULSALAM
-	  </p>
-        <span> Trained Introvert </span>
-      </Name>
-      <Contacts contacts={contacts} />
-    </Aside>
-    <Hero />
-    <Cover />
+  <Slant />
+  <Slant white />
+  <Aside>
+  <Name>
+  <p>
+  AYINLA
+  <br />
+  ABDULSALAM
+  </p>
+  <span> Software Engineer </span>
+  </Name>
+  <Contacts contacts={contacts} />
+  </Aside>
+  <Hero />
+  <Cover />
   </Outer>
 );
 

@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 
 import {
@@ -15,12 +17,21 @@ injectGlobal `
   body, html{
     margin: 0;
     padding:0;
-    font-family: 'Varela Round', sans-serif;
+    overflow: hidden;
+  }
+
+  @font-face: {
+    src: url('assets/font.ttf');
+    font-family: 'Raleway', sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 
   *{
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
   }
 
   body{
@@ -33,9 +44,9 @@ export default props => (
 
   <BrowserRouter>
 
-    <div>
-      <Route path="/" component={Welcome} />
-    </div>
+  <div>
+  <Route path="/" component={Welcome} />
+  </div>
 
   </BrowserRouter>
 
