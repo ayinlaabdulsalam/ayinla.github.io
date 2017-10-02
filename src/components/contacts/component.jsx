@@ -30,6 +30,10 @@ const Div = styled.div `
       font-size: 1rem;
       margin-bottom: 3rem;
       cursor: pointer;
+      a{
+        text-decoration: none;
+        color: #525252;
+      }
     }
 `;
 
@@ -37,9 +41,11 @@ const Contact = props => <a target="_blank" href={props.contact.url}> {props.con
 
 const Contacts = props => (
   <Div>
-  <button> Hire Me </button>
-  <div> {props.contacts.map(contact => <Contact key={contact.name} contact={contact} />)} </div>
-    </Div>
+  <button> <a href="mailto:ayinlaabdulsalam@gmail.com"> Contact Me </a> </button>
+  <div>
+  {props.contacts.map(contact => <Contact key={contact.name} contact={contact} />)}
+  </div>
+  </Div>
 );
 
 export default Contacts;

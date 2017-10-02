@@ -1,7 +1,10 @@
+// @flow
+
 import React from 'react';
 
 import styled from 'styled-components';
 import Contacts from '../../components/contacts';
+import Navigation from '../../components/navigation';
 import buddist from '../../assets/buddist.png';
 
 const contacts = [{
@@ -11,7 +14,7 @@ const contacts = [{
   name: 'LinkedIn',
   url: 'https://www.linkedin.com/in/ayinla/',
 }, {
-
+  name: 'Wakatime',
   url: 'https://wakatime.com/@ayinla',
 }];
 
@@ -49,13 +52,13 @@ const HeroP = styled.p `
   right: 0;
   bottom: 35%;
   width: 45%;
-  font-size: 1rem;
+  font-size: 1.2rem;
   h3{
     font-size: 3rem;
   }
   > span {
       color: #4133a2;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 `;
 
@@ -88,19 +91,24 @@ const Slant = styled.div `
   transform-origin: right top;
   display:block;
   height: 200%;
-
-  }
 `;
 
 const Hero = props => {
 
   return (<HeroP>
     <h3> Hi,</h3> <br />
-    I write vanilla code. <br />
+    I write <span> vanilla </span> code. <br />
+    I enjoy tackling <span> Complex </span> problems. <br/>
     I am mostly interested in <span> Javascript </span>, <span> Functional </span> programming, <span> React </span> &amp; <span> Redux </span>
     </HeroP>)
 
 }
+
+const nav = [{
+  name: 'Blog',
+  href: "https://medium.com/@ayinlaabdulsalam",
+  target: 'blank'
+}];
 
 const Home = () => (
   <Outer >
@@ -117,6 +125,7 @@ const Home = () => (
   </Name>
   <Contacts contacts={contacts} />
   </Aside>
+  <Navigation urls={nav}/>
   <Hero />
   <Cover />
   </Outer>

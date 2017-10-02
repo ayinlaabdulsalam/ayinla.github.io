@@ -30,7 +30,7 @@ injectGlobal `
   }
 
   *{
-  box-sizing: border-box;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
   }
