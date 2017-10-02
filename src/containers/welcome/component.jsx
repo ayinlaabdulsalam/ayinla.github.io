@@ -97,9 +97,10 @@ const Hero = props => {
 
   return (<HeroP>
     <h3> Hi,</h3> <br />
+    I'm a <span> Functional </span> programmer at heart, but I enjoy <span> OOP </span> also. <br />
     I write <span> vanilla </span> code. <br />
     I enjoy tackling <span> Complex </span> problems. <br/>
-    I am mostly interested in <span> Javascript </span>, <span> Functional </span> programming, <span> React </span> &amp; <span> Redux </span>
+    I am mostly interested in <span> Node</span>,<span>  Javascript</span>,<span>  React</span> &amp; <span>  Redux</span>.
     </HeroP>)
 
 }
