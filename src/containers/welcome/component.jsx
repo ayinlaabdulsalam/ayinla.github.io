@@ -100,7 +100,8 @@ const Hero = props => {
     I'm a <span> Functional </span> programmer at heart, but I enjoy <span> OOP </span> also. <br />
     I write <span> vanilla </span> code. <br />
     I enjoy tackling <span> Complex </span> problems. <br/>
-    I am mostly interested in <span> Node</span>,<span>  Javascript</span>,<span>  React</span> &amp; <span>  Redux</span>.
+    I am mostly interested in <span> Node</span>,<span>  Javascript</span>,<span>  React</span> &amp; <span>  Redux</span>. <br />
+    But I can <span> learn </span> anything you want me to learn.
     </HeroP>)
 
 }
