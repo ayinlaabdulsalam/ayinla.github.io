@@ -1,19 +1,14 @@
 // @flow
 
-import React from 'react';
+import React from "react";
 
-import {
-  BrowserRouter,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter, Route } from "react-router-dom";
 
-import {
-  injectGlobal,
-} from 'styled-components';
+import { injectGlobal } from "styled-components";
 
-import Welcome from './containers/welcome';
+import Welcome from "./containers/welcome";
 
-injectGlobal `
+injectGlobal`
   body, html{
     margin: 0;
     padding:0;
@@ -42,13 +37,9 @@ injectGlobal `
 `;
 
 export default props => (
-
   <BrowserRouter>
-
-  <div>
-  <Route path="/" component={Welcome} />
-  </div>
-
+    <div>
+      <Route path="/" component={Welcome} />
+    </div>
   </BrowserRouter>
-
 );

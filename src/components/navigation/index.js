@@ -1,2 +1,2 @@
-import RightBox from './component';
+import RightBox from "./component";
 export default RightBox;
