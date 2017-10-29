@@ -24,8 +24,8 @@ const contacts = [
 
 const Outer = styled.div`
   overflow: hidden;
-  background: url(${buddist});
   background-size: 100%;
+  background: black;
   width: 100vw;
   height 100vh;
 `;
@@ -135,7 +135,6 @@ const Home = () => (
       </Name>
       <Contacts contacts={contacts} />
     </Aside>
-    <Navigation urls={nav} />
     <Hero />
     <Cover />
   </Outer>
