@@ -131,7 +131,16 @@ const Home = () => (
           <br />
           ABDULSALAM
         </p>
-        <span> Software Engineer </span>
+        <span>
+          Software Engineer @
+          <a
+            target="blank"
+            style={{ color: "orange" }}
+            href="https://www.quadlobe.com"
+          >
+            Quadlobe.com
+          </a>
+        </span>
       </Name>
       <Contacts contacts={contacts} />
     </Aside>
