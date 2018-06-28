@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ayinlaaji/ayinlaaji.github.io.svg?branch=master)](https://travis-ci.org/ayinlaaji/ayinlaaji.github.io)
+
 ### PERSONAL WEBSITE
 ***
 
