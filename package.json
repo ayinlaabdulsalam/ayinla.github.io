@@ -1,28 +1,27 @@
 {
-    "name": "ayinla",
-    "homepage": ".",
-    "version": "1.0.0",
-    "private": true,
-    "dependencies": {
-        "flow-bin": "^0.56.0",
-        "react": "^16.0.0",
-        "react-dom": "^16.0.0",
-        "react-router-dom": "^4.1.1",
-        "styled-components": "^2.1.2"
-    },
-    "devDependencies": {
-        "react-scripts": "1.0.10",
-        "tap-spec": "^4.1.1",
-        "tape": "^4.8.0"
-    },
-    "scripts": {
-        "prebuild": "rm -r index.html static",
-        "build": "react-scripts build",
-        "postbuild": "yarn clean-build && yarn git-flat",
-        "clean-build": "cd build && rm asset-manifest.json service-worker.js static/js/*.map",
-        "git-flat": "mv build/* . && trash build",
-        "start": "react-scripts start",
-        "test": "tape test | tap-spec",
-        "eject": "react-scripts eject"
-    }
+  "name": "ayinla",
+  "homepage": ".",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "flow-bin": "^0.56.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.1.1",
+    "styled-components": "^2.1.2"
+  },
+  "devDependencies": {
+    "jest": "^23.2.0",
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "prebuild": "rm -r index.html static",
+    "build": "react-scripts build",
+    "postbuild": "yarn clean-build && yarn git-flat",
+    "clean-build": "cd build && rm asset-manifest.json service-worker.js static/js/*.map",
+    "git-flat": "mv build/* . && trash build",
+    "start": "react-scripts start",
+    "test": "jest",
+    "eject": "react-scripts eject"
+  }
 }
