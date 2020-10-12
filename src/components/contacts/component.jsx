@@ -47,7 +47,7 @@ const Contacts = props => (
   <Div>
     <button>
       {" "}
-      <a href="mailto:ayinlaabdulsalam@gmail.com"> Contact Me </a>{" "}
+      <a href="mailto:abdulsalam_ayinla@quadlobe.com"> Contact Me </a>{" "}
     </button>
     <div>
       {props.contacts.map(contact => (
